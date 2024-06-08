@@ -11,12 +11,15 @@ The navigation bar at the bottom shows two usable tabs. The 'Add Medicine' tab, 
 ## Screenshots
 
 User landing page of the 'Add Medicine' screen which allows users to enter in the medicine they are taking and the dosage
+
 ![Add Medicine](<./images/AddMedicine.png>)
 
 If a user clicks the 'View History' tab, it shows the list of medicines logged
+
 ![Medicine Log Before](<./images/MedicineLogBefore.png>)
 
 If a user clicks the 'Refresh' icon, it will get the most up to date medicine log and display this list
+
 ![Medicine Log After](<./images/MedicineLogAfter.png>)
 
 
