@@ -8,3 +8,6 @@ Assignment 2
 
 Assignment 3
 ![Assignment 3 Solution](<Assignment3.png>)
+
+Assignment 4
+![Assignment 4 Solution](<Assignment4.png>)
