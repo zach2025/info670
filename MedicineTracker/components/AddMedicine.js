@@ -3,6 +3,22 @@ import { TextInput, Text, Button } from "react-native-paper";
 import { StyleSheet, View, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+const styles = StyleSheet.create({
+  profile: {
+    marginTop: 40,
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  disclosure: {
+    marginTop: 10,
+    marginBottom: 10,
+    fontWeight: "500",
+    fontSize: 14,
+    display: "flex",
+    alignSelf: "center",
+  },
+});
+
 const AddMedicine = () => {
   const [name, setName] = useState("");
   const [dosage, setDosage] = useState("");
@@ -17,10 +33,7 @@ const AddMedicine = () => {
         await AsyncStorage.setItem("name", name);
         await AsyncStorage.setItem("dosage", dosage);
 
-        // TODO: Add API PUT Call for name, dosage, and datetime
         const datetime = new Date().toString();
-
-        console.log("Here")
 
         fetch(
           `https://www.cs.drexel.edu/~zt86/addMedicine.php?name=${name}&dosage=${dosage}&date=${datetime}`
@@ -99,21 +112,5 @@ const AddMedicine = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  profile: {
-    marginTop: 40,
-    marginLeft: 10,
-    marginRight: 10,
-  },
-  disclosure: {
-    marginTop: 10,
-    marginBottom: 10,
-    fontWeight: "500",
-    fontSize: 14,
-    display: "flex",
-    alignSelf: "center",
-  },
-});
 
 export default AddMedicine;
